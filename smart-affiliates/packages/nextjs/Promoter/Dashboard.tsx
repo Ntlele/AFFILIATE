@@ -3,7 +3,6 @@
 
 import { useEffect } from "react";
 import Head from "next/head";
-import { tsParticles } from "particles.js";
 
 // pages/index.tsx
 
@@ -30,41 +29,6 @@ import { tsParticles } from "particles.js";
 // pages/index.tsx
 
 const Dashboard = () => {
-  useEffect(() => {
-    // Load particles.js script dynamically
-    const script = document.createElement("script");
-    script.src = "https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js";
-    script.onload = () => {
-      tsParticles.load("particles-js", {
-        particles: {
-          number: { value: 100, density: { enable: true, value_area: 800 } },
-          color: { value: "#00ffcc" },
-          shape: { type: "circle", polygon: { nb_sides: 5 } },
-          opacity: { value: 0.5 },
-          size: { value: 3, random: true },
-          line_linked: { enable: true, distance: 150, color: "#00ffcc", opacity: 0.4, width: 1 },
-          move: { enable: true, speed: 6 },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "repulse" },
-            onclick: { enable: true, mode: "push" },
-          },
-        },
-        retina_detect: true,
-      });
-    };
-    document.body.appendChild(script);
-
-    // Event listener for buttons
-    const buttons = document.querySelectorAll(".buy-button");
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
-        alert("Thank you for your purchase!");
-      });
-    });
-  }, []);
 
   const promoters = [
     {
