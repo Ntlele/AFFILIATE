@@ -1,0 +1,63 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root,
+[data-theme] {
+  background: oklch(var(--b2));
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.btn {
+  @apply shadow-md;
+}
+
+.btn.btn-ghost {
+  @apply shadow-none;
+}
+
+
+.neon-background {
+  background: linear-gradient(to bottom right, rgba(29, 240, 255, 0.226) 20%, rgba(192, 253, 255, 0.507) 70%);
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(101, 122, 121, 0.185);
+  }
+  100% {
+    background-color: rgba(0, 247, 255, 0.315);
+  }
+}
+
+.neon-text {
+  color: black;
+  text-shadow: 
+    0 0 5px white,
+    0 0 10px whitesmoke,
+    0 0 15px whitesmoke,
+    0 0 20px whitesmoke,
+    0 0 30px white,
+    0 0 40px white;
+}
+
+.reflection {
+  transform: scaleY(-1); /* Flip vertically */
+  opacity: 0.4; /* Set lower opacity for reflection */
+}
